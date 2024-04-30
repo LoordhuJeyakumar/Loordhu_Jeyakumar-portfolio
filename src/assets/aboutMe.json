@@ -1,0 +1,17 @@
+{
+  "homepage": {
+    "name": "Your Full Name",
+    "title": "Your Professional Title",
+    "summary": "A compelling one-liner about your professional identity",
+    "skills": ["Key Skill 1", "Key Skill 2", "Key Skill 3"],
+    "latestProject": {
+      "title": "Latest Project Title",
+      "description": "A brief overview of your latest work",
+      "link": "URL to the project"
+    },
+    "contact": {
+      "email": "your.email@example.com",
+      "linkedin": "LinkedIn Profile URL"
+    }
+  }
+}
