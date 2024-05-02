@@ -75,18 +75,24 @@ function SideNavBar() {
                   </NavLink>
                 </li>
                 <li className="nav-item">
+                  <NavLink
+                    className="nav-link ripple"
+                    to="/ProfessionalExperience"
+                  >
+                    <span>Experience</span>
+                    <i className="fa fa-briefcase" aria-hidden="true"></i>
+                  </NavLink>
+                </li>
+                <li className="nav-item">
                   <NavLink className="nav-link ripple" to="/contact">
                     <span>Contact</span>
                     <i className="fa-solid fa-address-card"></i>
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink
-                    className="nav-link ripple"
-                    to="/ProfessionalExperience"
-                  >
-                    <span>Experience</span>
-                    <i className="fa-solid fa-address-card"></i>
+                  <NavLink className="nav-link ripple" to="/resume">
+                    <span>Resume</span>
+                    <i className="fa-solid fa-timeline"></i>
                   </NavLink>
                 </li>
               </ul>

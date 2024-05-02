@@ -5,6 +5,7 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import ProfessionalExperience from "./pages/ProfessionalExperience";
+import Resume from "./pages/Resume";
 
 function AppRoutes() {
   return (
@@ -18,6 +19,7 @@ function AppRoutes() {
         path="ProfessionalExperience"
         element={<ProfessionalExperience />}
       />
+      <Route path="resume" element={<Resume />} />
     </Routes>
   );
 }
