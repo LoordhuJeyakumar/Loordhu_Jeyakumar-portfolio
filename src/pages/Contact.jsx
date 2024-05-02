@@ -3,6 +3,10 @@ import Wrapper from "../components/Wrapper";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import "highlight.js/styles/github.css";
+import axios from "axios";
+
+const sendMessageApi =
+  "https://pjj68j7q9b.execute-api.ap-south-1.amazonaws.com/production/message/sendMessage";
 
 function Contact() {
   hljs.registerLanguage("javascript", javascript);
@@ -25,13 +29,25 @@ function Contact() {
     });
   };
 
+  const handleSendMessage = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post(sendMessageApi, messageInput, {
+        withCredentials: false,
+      });
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       <Wrapper>
         <div className="contact-container row p-5 m-5">
           <h2 className="text-center">Send a Message</h2>
           <div className="col-md-6">
-            <form action="" className="cotactForm">
+            <form className="cotactForm" onSubmit={handleSendMessage}>
               <div className="form-floating mb-3">
                 <input
                   name="name"

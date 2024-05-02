@@ -104,7 +104,7 @@ function Resume() {
               </header>
               <div className="resume-body p-5">
                 <section className="resume-section summary-section mb-5">
-                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                  <h2 className="resume-section-title text-uppercase fw-bold pb-3 mb-3">
                     PROFESSIONAL Summary
                   </h2>
                   <div className="resume-section-content">
@@ -141,7 +141,7 @@ function Resume() {
                 <div className="row">
                   <div className="col-lg-9">
                     <section className="resume-section experience-section mb-5">
-                      <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                      <h2 className="resume-section-title text-uppercase fw-bold pb-3 mb-3">
                         Work Experience
                       </h2>
                       <div className="resume-section-content">
@@ -149,7 +149,7 @@ function Resume() {
                           <article className="resume-timeline-item position-relative pb-5">
                             <div className="resume-timeline-item-header mb-2">
                               <div className="d-flex flex-column flex-md-row">
-                                <h3 className="resume-position-title font-weight-bold mb-1">
+                                <h3 className="resume-position-title fw-bold mb-1">
                                   Full Stack Developer Program (MERN Stack)
                                 </h3>
                                 <div className="resume-company-name ms-auto">
@@ -229,7 +229,7 @@ function Resume() {
                           <article className="resume-timeline-item position-relative pb-5">
                             <div className="resume-timeline-item-header mb-2">
                               <div className="d-flex flex-column flex-md-row">
-                                <h3 className="resume-position-title font-weight-bold mb-1">
+                                <h3 className="resume-position-title fw-bold mb-1">
                                   Technical Support Specialist (Remote)
                                 </h3>
                                 <div className="resume-company-name ms-auto">
@@ -300,7 +300,7 @@ function Resume() {
                                   solutions.
                                 </li>
                               </ul>
-                              <h4 className="resume-timeline-item-desc-heading font-weight-bold">
+                              <h4 className="resume-timeline-item-desc-heading fw-bold">
                                 Technologies and softwares used:
                               </h4>
                               <ul className="list-inline">
@@ -326,7 +326,7 @@ function Resume() {
                           <article className="resume-timeline-item position-relative pb-5">
                             <div className="resume-timeline-item-header mb-2">
                               <div className="d-flex flex-column flex-md-row">
-                                <h3 className="resume-position-title font-weight-bold mb-1">
+                                <h3 className="resume-position-title fw-bold mb-1">
                                   System Admin
                                 </h3>
                                 <div className="resume-company-name ms-auto">
@@ -404,7 +404,7 @@ function Resume() {
                                   critical sales periods.
                                 </li>
                               </ul>
-                              <h4 className="resume-timeline-item-desc-heading font-weight-bold">
+                              <h4 className="resume-timeline-item-desc-heading fw-bold">
                                 Technologies and softwares used:
                               </h4>
                               <ul className="list-inline">
@@ -460,7 +460,7 @@ function Resume() {
                           <article className="resume-timeline-item position-relative pb-5">
                             <div className="resume-timeline-item-header mb-2">
                               <div className="d-flex flex-column flex-md-row">
-                                <h3 className="resume-position-title font-weight-bold mb-1">
+                                <h3 className="resume-position-title fw-bold mb-1">
                                   Computer Hardware & Network Technician
                                 </h3>
                                 <div className="resume-company-name ms-auto">
@@ -530,7 +530,7 @@ function Resume() {
                                   using various tools.
                                 </li>
                               </ul>
-                              <h4 className="resume-timeline-item-desc-heading font-weight-bold">
+                              <h4 className="resume-timeline-item-desc-heading fw-bold">
                                 Technologies used:
                               </h4>
                               <ul className="list-inline">
@@ -568,12 +568,12 @@ function Resume() {
                   </div>
                   <div className="col-lg-3">
                     <section className="resume-section skills-section mb-5">
-                      <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                      <h2 className="resume-section-title text-uppercase fw-bold pb-3 mb-3">
                         Skills &amp; Tools
                       </h2>
                       <div className="resume-section-content">
                         <div className="resume-skill-item">
-                          <h4 className="resume-skills-cat font-weight-bold">
+                          <h4 className="resume-skills-cat fw-bold">
                             Frontend
                           </h4>
                           <ul className="list-unstyled mb-4">
@@ -649,9 +649,7 @@ function Resume() {
 
                         <hr />
                         <div className="resume-skill-item">
-                          <h4 className="resume-skills-cat font-weight-bold">
-                            Backend
-                          </h4>
+                          <h4 className="resume-skills-cat fw-bold">Backend</h4>
                           <ul className="list-unstyled">
                             <li className="mb-2">
                               <div className="resume-skill-name">Node JS</div>
@@ -738,9 +736,7 @@ function Resume() {
 
                         <hr />
                         <div className="resume-skill-item">
-                          <h4 className="resume-skills-cat font-weight-bold">
-                            Others
-                          </h4>
+                          <h4 className="resume-skills-cat fw-bold">Others</h4>
                           <ul className="list-unstyled">
                             <li className="mb-2">
                               <div className="resume-skill-name">AWS</div>
@@ -855,7 +851,7 @@ function Resume() {
                         </div>
 
                         <section className="resume-section reference-section mb-5">
-                          <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                          <h2 className="resume-section-title text-uppercase fw-bold pb-3 mb-3">
                             <i class="fa fa-trophy" aria-hidden="true"></i>{" "}
                             Certificate of Appreciation
                           </h2>
@@ -927,13 +923,13 @@ function Resume() {
                         </section>
 
                         <section className="resume-section education-section mb-5">
-                          <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                          <h2 className="resume-section-title text-uppercase fw-bold pb-3 mb-3">
                             Education
                           </h2>
                           <div className="resume-section-content">
                             <ul className="list-unstyled">
                               <li className="mb-2">
-                                <div className="resume-degree font-weight-bold">
+                                <div className="resume-degree fw-bold">
                                   Bachelor of Computer Applications (BCA)
                                 </div>
                                 <div className="resume-degree-org">
@@ -948,24 +944,24 @@ function Resume() {
                         </section>
 
                         <section className="resume-section language-section mb-5">
-                          <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                          <h2 className="resume-section-title text-uppercase fw-bold pb-3 mb-3">
                             Language
                           </h2>
                           <div className="resume-section-content">
                             <ul className="list-unstyled resume-lang-list">
                               <li>
-                                <span className="resume-lang-name font-weight-bold">
+                                <span className="resume-lang-name fw-bold">
                                   Tamil
                                 </span>{" "}
-                                <small className="text-muted font-weight-normal">
+                                <small className="text-muted fw-normal">
                                   (Native)
                                 </small>
                               </li>
                               <li className="mb-2">
-                                <span className="resume-lang-name font-weight-bold">
+                                <span className="resume-lang-name fw-bold">
                                   English
                                 </span>{" "}
-                                <small className="text-muted font-weight-normal">
+                                <small className="text-muted fw-normal">
                                   (Professional)
                                 </small>
                               </li>
@@ -974,7 +970,7 @@ function Resume() {
                         </section>
 
                         <section className="resume-section interests-section mb-5">
-                          <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                          <h2 className="resume-section-title text-uppercase fw-bold pb-3 mb-3">
                             Interests
                           </h2>
                           <div className="resume-section-content">
