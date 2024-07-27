@@ -5,8 +5,11 @@ import javascript from "highlight.js/lib/languages/javascript";
 import "highlight.js/styles/github.css";
 import axios from "axios";
 
-const sendMessageApi =
+/* const sendMessageApi =
   "https://pjj68j7q9b.execute-api.ap-south-1.amazonaws.com/production/message/sendMessage";
+ */
+  const sendMessageApi =
+  "https://loordhu-jeyakumar-portfolio-be.onrender.com/message/sendMessage";
 
 function Contact() {
   hljs.registerLanguage("javascript", javascript);
