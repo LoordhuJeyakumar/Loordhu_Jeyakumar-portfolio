@@ -153,23 +153,16 @@ function SideNavBar() {
             <div className="aside-footer">
               <ul className="list-unstyled list-inline">
                 <li className="list-inline-item">
-                  <a href="https://www.facebook.com/William.2418/">
-                    <i className="fa-brands fa-facebook"></i>
-                  </a>
-                </li>
-                <li className="list-inline-item">
-                  <a href="https://github.com/Long18">
+                  <a href="https://github.com/loordhujeyakumar" target="_blank">
                     <i className="fa-brands fa-github"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="https://www.linkedin.com/in/william186/">
+                  <a
+                    href="https://www.linkedin.com/in/loordhujeyakumar/"
+                    target="_blank"
+                  >
                     <i className="fa-brands fa-linkedin"></i>
-                  </a>
-                </li>
-                <li className="list-inline-item">
-                  <a href="https://twitter.com/willlee186">
-                    <i className="fa-brands fa-square-x-twitter"></i>
                   </a>
                 </li>
               </ul>
