@@ -4,11 +4,12 @@ import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import "highlight.js/styles/github.css";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 /* const sendMessageApi =
   "https://pjj68j7q9b.execute-api.ap-south-1.amazonaws.com/production/message/sendMessage";
  */
-  const sendMessageApi =
+const sendMessageApi =
   "https://loordhu-jeyakumar-portfolio-be.onrender.com/message/sendMessage";
 
 function Contact() {
@@ -38,8 +39,19 @@ function Contact() {
       const response = await axios.post(sendMessageApi, messageInput, {
         withCredentials: false,
       });
+      if (response.status === 201) {
+        setMessageInput({
+          name: "",
+          email: "",
+          message: "",
+        });
+        toast.success(response.data.message);
+      }
+
+     
       console.log(response);
     } catch (error) {
+      toast.error(error.response.data.message);
       console.log(error);
     }
   };
