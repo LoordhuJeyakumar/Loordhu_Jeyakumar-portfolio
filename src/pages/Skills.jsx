@@ -1,5 +1,3 @@
-import React from "react";
-import Wrapper from "../components/Wrapper";
 import mongodbIcon from "../assets/images/icons/mongodb.png";
 import expressJSIcon from "../assets/images/icons/express-js.png";
 
@@ -22,6 +20,7 @@ import nextJsIcon from "../assets/images/icons/nextjs-icon.png";
 
 import englishIcon from "../assets/images/icons/lang-en.png";
 import tamilIcon from "../assets/images/icons/lang-ta.png";
+import { motion } from "framer-motion";
 
 function Skills() {
   const programmingSkills = [
@@ -118,26 +117,70 @@ function Skills() {
       iconUrl: nextJsIcon,
     },
   ];
+
+  const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.1 },
+    }),
+    exit: { opacity: 0, y: 30 },
+  };
   return (
-    <div id="skills">
-      <Wrapper>
+    <div id="skills" className="bg-light-background dark:bg-dark-background ">
+      <>
         <div className="p-5 ms-5">
           <hr className="horizontal dark" />
           <div className="skill-heading d-flex justify-content-start align-items-start flex-column">
-            <h1 className="">My Skills</h1>
-            <p>I love to work with</p>
+            <motion.h1
+              className="text-light-primaryText dark:text-dark-primaryText"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              My Skills
+            </motion.h1>
+            <motion.p
+              className="text-lg text-gray-600 dark:text-gray-400 mt-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              I love to work with
+            </motion.p>
           </div>
           <hr className="vertical " />
-          <div className="container">
-            <h3 className="skill-label">
+          <div className="container text-light-primaryText dark:text-dark-primaryText">
+            <motion.h3
+              className="skill-label"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+            >
               Programming languages | framework | library
-            </h3>
-            <div className="skill-cards-container">
+            </motion.h3>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="skill-cards-container"
+            >
               {programmingSkills.map((eachSkill, i) => {
                 return (
-                  <div className="div-card" key={i}>
+                  <motion.div
+                    className="div-card cursor-pointer
+                    text-light-secondaryText dark:text-dark-secondaryText
+                    hover:text-light-primaryText dark:hover:text-dark-primaryText
+                    "
+                    key={i}
+                    custom={i}
+                    variants={fadeIn}
+                  >
                     <div
-                      className="div-card-item"
+                      className="div-card-item cursor-pointer
+                  
+                      "
                       title={`Level :${eachSkill.level}`}
                     >
                       <img
@@ -147,16 +190,35 @@ function Skills() {
                       />
                     </div>
                     <span>{eachSkill.name}</span>
-                  </div>
+                  </motion.div>
                 );
               })}
-            </div>
+            </motion.div>
 
-            <h3 className="skill-label">Tools &amp; Other Skills</h3>
-            <div className="skill-cards-container">
+            <motion.h3
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+              className="skill-label"
+            >
+              Tools &amp; Other Skills
+            </motion.h3>
+            <motion.div
+              className="skill-cards-container"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               {toolsAndOthers.map((eachSkill, i) => {
                 return (
-                  <div className="div-card" key={i}>
+                  <motion.div
+                    className="div-card cursor-pointer
+                    text-light-secondaryText dark:text-dark-secondaryText
+                    hover:text-light-primaryText dark:hover:text-dark-primaryText"
+                    key={i}
+                    custom={i}
+                    variants={fadeIn}
+                  >
                     <div
                       className="div-card-item"
                       title={`Level :${eachSkill.level}`}
@@ -168,15 +230,34 @@ function Skills() {
                       />
                     </div>
                     <span>{eachSkill.name}</span>
-                  </div>
+                  </motion.div>
                 );
               })}
-            </div>
-            <h3 className="skill-label">I'm currently learning:</h3>
-            <div className="skill-cards-container">
+            </motion.div>
+            <motion.h3
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+              className="skill-label"
+            >
+              I&#39;m currently learning:
+            </motion.h3>
+            <motion.div
+              className="skill-cards-container"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               {learnings.map((eachSkill, i) => {
                 return (
-                  <div className="div-card" key={i}>
+                  <motion.div
+                    className="div-card cursor-pointer
+                    text-light-secondaryText dark:text-dark-secondaryText
+                    hover:text-light-primaryText dark:hover:text-dark-primaryText"
+                    key={i}
+                    custom={i}
+                    variants={fadeIn}
+                  >
                     <div
                       className="div-card-item"
                       title={`Level :${eachSkill.level}`}
@@ -188,13 +269,31 @@ function Skills() {
                       />
                     </div>
                     <span>{eachSkill.name}</span>
-                  </div>
+                  </motion.div>
                 );
               })}
-            </div>
-            <h3 className="skill-label">Communication Skills</h3>
-            <div className="skill-cards-container">
-              <div className="div-card">
+            </motion.div>
+            <motion.h3
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+              className="skill-label"
+            >
+              Communication Skills
+            </motion.h3>
+            <motion.div
+              className="skill-cards-container"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <motion.div
+                className="div-card cursor-pointer
+              text-light-secondaryText dark:text-dark-secondaryText
+              hover:text-light-primaryText dark:hover:text-dark-primaryText
+              "
+                variants={fadeIn}
+              >
                 <div
                   className="div-card-item english"
                   title="Level : Proficient"
@@ -207,8 +306,11 @@ function Skills() {
                   />
                 </div>
                 <span>English</span>
-              </div>
-              <div className="div-card">
+              </motion.div>
+              <motion.div
+                className="div-card cursor-pointer text-light-secondaryText dark:text-dark-secondaryText hover:text-light-primaryText dark:hover:text-dark-primaryText"
+                variants={fadeIn}
+              >
                 <div
                   className="div-card-item tamil"
                   title="Level : Advanced Beginner"
@@ -221,11 +323,11 @@ function Skills() {
                   />
                 </div>
                 <span>Tamil</span>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
-      </Wrapper>
+      </>
     </div>
   );
 }
