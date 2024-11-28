@@ -1,10 +1,7 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import PropTypes from "prop-types";
+import { createContext, useState, useEffect } from "react";
 
 const ThemeContext = createContext();
-
-export const useTheme = () => {
-  return useContext(ThemeContext);
-};
 
 export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -13,15 +10,23 @@ export const ThemeProvider = ({ children }) => {
     setIsDarkMode((prevMode) => !prevMode);
   };
 
-  const theme = isDarkMode ? "dark" : "light";
-
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   }, [isDarkMode]);
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
 };
+
+ThemeProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default ThemeContext;
