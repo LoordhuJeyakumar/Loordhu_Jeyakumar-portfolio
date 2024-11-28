@@ -1,4 +1,7 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
 [data-theme="light"] {
   --bg-color: #f5f3f0;
   --text-color: #000000;
@@ -586,7 +589,7 @@ a:active {
   position: relative;
   display: flex !important;
   justify-content: end !important;
-  color: rgba(255, 255, 255, 0.8);
+ background: inherit;
   text-transform: uppercase;
   padding-right: 0.1rem;
   opacity: 1;
@@ -597,12 +600,14 @@ a:active {
   border-radius: 0rem 1.5rem 1.5rem 0;
   padding: 10px 20px;
   width: 100% !important;
-  margin-left: -0.95rem;
+  margin-left: -3.99rem;
   font-weight: 600;
-  align-items: center !important;
+  align-items: end !important;
 }
 .navbar-nav .nav-item{
   width: 100% !important;
+  display :flex;
+  justify-content:center;
  
 
 }
@@ -646,14 +651,20 @@ a:active {
   margin-left: 10px;
 }
 
-.navbar-nav .nav-link:hover {
+/* .navbar-nav .nav-link:hover {
   color: rgba(255, 255, 255, 1);
-}
+} */
 
 .navbar-nav .nav-link.active {
-  color: var(--text-color) !important;
-  background:var(--bg-color) !important;
+ @apply bg-light-accent text-white font-bold;
+ color: white !important;
 }
+
+.dark .navbar-nav .nav-link.active {
+  @apply bg-dark-accent text-black font-bold;
+  color: black !important;
+}
+
 
 .aside {
   float: right;
@@ -663,7 +674,7 @@ a:active {
   height: calc(100vh - 30px);
   bottom: 0;
   width: 250px;
-  z-index: 999;
+/*   z-index: 999; */
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   -ms-transition: all 0.3s ease-in-out 0s;
@@ -756,6 +767,8 @@ box-shadow: -1px 2px 22px 0px rgba(0,0,0,0.61) !important; */
   display: block;
   line-height: 30px;
 }
+
+
 
 /* ---------------------------------------------- 
 * 6. Home
@@ -1306,7 +1319,7 @@ img.shape8 {
     right: 0;
     height: 100%;
     width: 100%;
-    z-index: 0;
+   /*  z-index: 0; */
     top: 0;
     opacity: 0;
     visibility: hidden;
@@ -1651,7 +1664,7 @@ box-shadow: 16px 14px 10px 0px rgba(0,0,0,0.1);
 #skills .container .div-card span {
   position: relative;
   display: table;
-  color: #6e6e6e;
+/*   color: #6e6e6e; */
   font-size: 15px;
   margin-top: 90px;
   margin-left: auto;
@@ -1870,15 +1883,15 @@ hr.horizontal.gray-light {
 
 .vertical-timeline-element-icon {
   position: absolute;
-  background-color: var(--bg-color) !important;
-  color: var(--text-color) !important;
+ /*  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important; */
   top: 0;
   left: 0;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 0 4px #fff,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05);
-  box-shadow: 0 0 0 4px #fff,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)
+  box-shadow: 0 0 0 4px #fff,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05);
 }
 
 .vertical-timeline--one-column-right .vertical-timeline-element-icon {
