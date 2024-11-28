@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import ProfessionalExperience from "./pages/ProfessionalExperience";
 import Resume from "./pages/Resume";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function AppRoutes() {
   return (
@@ -20,6 +21,7 @@ function AppRoutes() {
         element={<ProfessionalExperience />}
       />
       <Route path="resume" element={<Resume />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }
