@@ -1,26 +1,40 @@
-import React from "react";
-import Wrapper from "../components/Wrapper";
+import { motion } from "framer-motion";
+
+/* const profileImg =
+  "https://drive.google.com/uc?id=1Wes2V2BkdlK9BCHd9Nj7SFQlVakIk1nt" ||
+  "https://drive.google.com/file/d/1Wes2V2BkdlK9BCHd9Nj7SFQlVakIk1nt/preview"; */
+
 const profileImg =
-  "https://drive.google.com/uc?id=1Wes2V2BkdlK9BCHd9Nj7SFQlVakIk1nt";
+  "https://res.cloudinary.com/loordhujeyakumar-cloudinary/image/upload/v1732772410/ms3mvxs8s82nbufbjef7.jpg";
 
 function Resume() {
   return (
     <div>
-      <Wrapper>
-        <div className="d-flex flex-column m-4">
+      <>
+        <div className="flex flex-col m-4">
           <header className="header ">
-            <div className="top-bar theme-bg-primary-darken rounded">
-              <div className="header-intro header-intro-resume theme-bg-primary text-white py-4">
+            <div className="top-bar bg-light-accent text-dark-primaryText dark:bg-dark-accent dark:text-light-primaryText rounded">
+              <div className="header-intro header-intro-resume py-4">
                 <div className="container position-relative">
                   <h2 className="page-heading mb-3">Resume</h2>
-                  <a
-                    className="btn theme-btn-on-bg download-resume position-absolute fw-bold mx-auto"
+                  <motion.a
+                    className=" download-resume absolute mx-auto bg-light-primaryText dark:bg-dark-primaryText text-light-background dark:text-dark-background py-2 px-3 rounded-lg hover:bg-light-secondaryText dark:hover:bg-dark-secondaryText"
                     href="https://drive.google.com/file/d/1aC36SxwfEDlDURusvuu14SI9otdYWhnO/view?usp=sharing"
                     target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    viewport={{ once: true }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                    aria-label="Download Resume"
+                    title="Download Resume"
+                    download
                   >
                     Download PDF Version{" "}
                     <i className="fa fa-download" aria-hidden="true"></i>
-                  </a>
+                  </motion.a>
                 </div>
               </div>
             </div>
@@ -32,8 +46,9 @@ function Resume() {
                   <div className="imageBox rounded">
                     <img
                       className="me-3 img-fluid h-auto rounded picture mx-auto profile-picture"
-                      src="https://loordhujeyakumar-portfolio.s3.ap-south-1.amazonaws.com/20211225_140613~3.jpg"
+                      src={profileImg}
                       alt="Loordhu Jeyakumar"
+                      loading="lazy"
                     />
                   </div>
                   <div className="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
@@ -89,14 +104,17 @@ function Resume() {
                           </a>
                         </li>
 
-                        {/*  <li>
-                          <a href="http://www.vatsalshah.in" target="_blank">
+                        <li>
+                          <a
+                            href="https://loordhujeyakumar.netlify.app/"
+                            target="_blank"
+                          >
                             <span className="fa-container text-center me-2">
-                              <i class="fa fa-globe" aria-hidden="true"></i>
+                              <i className="fa fa-globe" aria-hidden="true"></i>
                             </span>
-                            vatsalshah.in
+                            https://loordhujeyakumar.netlify.app/
                           </a>
-                        </li> */}
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -146,7 +164,7 @@ function Resume() {
                       </h2>
                       <div className="resume-section-content">
                         <div className="resume-timeline position-relative">
-                          <article className="resume-timeline-item position-relative pb-5">
+                          {/*   <article className="resume-timeline-item position-relative pb-5">
                             <div className="resume-timeline-item-header mb-2">
                               <div className="d-flex flex-column flex-md-row">
                                 <h3 className="resume-position-title fw-bold mb-1">
@@ -225,7 +243,7 @@ function Resume() {
                               </p>
                             </div>
                           </article>
-
+ */}
                           <article className="resume-timeline-item position-relative pb-5">
                             <div className="resume-timeline-item-header mb-2">
                               <div className="d-flex flex-column flex-md-row">
@@ -397,7 +415,7 @@ function Resume() {
                                   Desktop Infrastructure (VDI) solution. This
                                   innovative approach enabled temporary staff at
                                   pop-up locations to securely access the
-                                  company's core systems, including billing
+                                  company&#39;s core systems, including billing
                                   software, from their personal devices. This
                                   ensured uninterrupted business continuity and
                                   prevented transaction delays during these
@@ -492,7 +510,7 @@ function Resume() {
                                     Network infrastructure foundation:
                                   </strong>{" "}
                                   I built and maintained a strong foundation for
-                                  the company's network infrastructure,
+                                  the company&#39;s network infrastructure,
                                   including configuration of essential services
                                   like DNS, DHCP, and Terminal Services (RDP
                                   server management).
@@ -852,7 +870,7 @@ function Resume() {
 
                         <section className="resume-section reference-section mb-5">
                           <h2 className="resume-section-title text-uppercase fw-bold pb-3 mb-3">
-                            <i class="fa fa-trophy" aria-hidden="true"></i>{" "}
+                            <i className="fa fa-trophy" aria-hidden="true"></i>{" "}
                             Certificate of Appreciation
                           </h2>
                           <div className="resume-section-content">
@@ -866,7 +884,7 @@ function Resume() {
                                   >
                                     {" "}
                                     <i
-                                      class="fa fa-certificate"
+                                      className="fa fa-certificate"
                                       aria-hidden="true"
                                     ></i>{" "}
                                     certificate
@@ -886,7 +904,7 @@ function Resume() {
                                   >
                                     {" "}
                                     <i
-                                      class="fa fa-certificate"
+                                      className="fa fa-certificate"
                                       aria-hidden="true"
                                     ></i>{" "}
                                     certificate
@@ -906,7 +924,7 @@ function Resume() {
                                   >
                                     {" "}
                                     <i
-                                      class="fa fa-certificate"
+                                      className="fa fa-certificate"
                                       aria-hidden="true"
                                     ></i>{" "}
                                     certificate
@@ -991,7 +1009,7 @@ function Resume() {
             </div>
           </article>
         </div>
-      </Wrapper>
+      </>
     </div>
   );
 }
