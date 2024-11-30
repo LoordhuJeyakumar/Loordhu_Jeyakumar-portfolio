@@ -23,6 +23,7 @@ import qrCodeWebsite from "../assets/images/icons/qr-code-generator.png";
 import bookSalesBlogImg from "../assets/images/bookSalesBlogImg.jpeg";
 import contactManagerImg from "../assets/images/contactManagerImg.png";
 import democracyHub from "../assets/images/democracyHub.jpeg";
+import inteLearn from "../assets/images/inteLearn.jpeg";
 
 const projeectsData = [
   {
@@ -203,7 +204,7 @@ const projeectsData = [
     image: null, // Replace with an appropriate image/icon for this project
   },
   {
-    id: 9,
+    id: 11,
     title: "DemocracyHub",
     description:
       "DemocracyHub is a platform designed to engage citizens with political processes by providing accessible information on representatives, elections, and civic participation. It empowers users to stay informed about ongoing policies, local governance, and public opinions, fostering active community involvement.",
@@ -223,6 +224,31 @@ const projeectsData = [
     liveLink: "https://democracyhub.netlify.app/",
     image: democracyHub, // Replace with a suitable image for the project
   },
+  {
+    id: 12,
+    title: "InteLearn - Learning Management System (LMS)",
+    description:
+      "InteLearn is an advanced Learning Management System (LMS) designed to simplify online education by connecting educators and students on a single platform. It offers features such as course creation, enrollment management, progress tracking, and seamless delivery of educational content, making learning more accessible and organized.",
+    technologies: [
+      { name: "React", icon: reactIcon },
+      { name: "Redux", icon: reduxIcon },
+      { name: "NodeJS", icon: nodeJsIcon },
+      { name: "ExpressJS", icon: expressJSIcon },
+      { name: "MongoDB", icon: mongoDB },
+      { name: "React Router Dom", icon: reactRouterIcon },
+      { name: "Bootstrap", icon: bootstrapIcon },
+      { name: "CSS", icon: cssIcon },
+      { name: "Git", icon: gitIcon },
+      { name: "Postman", icon: postManIcon },
+      { name: "VS Code", icon: vsCodeIcon },
+      { name: "JWT" },
+    
+    ],
+    githubLink: "https://github.com/LoordhuJeyakumar/InteLearn-LMS-frontend",
+    liveLink: "https://intelearn.netlify.app/",
+    image: inteLearn,
+  },
+  
 ];
 
 export default projeectsData;
