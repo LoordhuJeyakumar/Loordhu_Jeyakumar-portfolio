@@ -23,7 +23,7 @@ import qrCodeWebsite from "../assets/images/icons/qr-code-generator.png";
 import bookSalesBlogImg from "../assets/images/bookSalesBlogImg.jpeg";
 import contactManagerImg from "../assets/images/contactManagerImg.png";
 import democracyHub from "../assets/images/democracyHub.jpeg";
-import inteLearn from "../assets/images/inteLearn.jpeg";
+import inteLearn from "../assets/images/InteLearnNewSmall.png";
 
 const projeectsData = [
   {
@@ -248,7 +248,7 @@ const projeectsData = [
     liveLink: "https://intelearn.netlify.app/",
     image: inteLearn,
   },
-  
+
 ];
 
 export default projeectsData;
